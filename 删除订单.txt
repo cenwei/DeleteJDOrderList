@@ -1,0 +1,15 @@
+//清空订单
+$('a.order-del').each(function(){
+	console.log($(this).attr('_orderid'));
+	console.log($(this).attr('_passkey'));
+	//清空订单
+	var deleteOrderUrl ="http://order.jd.com/lazy/recycleOrder.action?orderId="+$(this).attr('_orderid')+"&PassKey="+$(this).attr('_passkey')+"&callback=jQuery3795346&_=1468665355979";
+	$.ajax({
+             type: "GET",
+             url: deleteOrderUrl,
+             dataType: "json",
+             success: function(data){
+			    console.log("成功删除");
+			 }
+			 });
+});

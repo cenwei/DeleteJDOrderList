@@ -1,0 +1,14 @@
+//清空回收站
+$('a.order-del').each(function(){
+	console.log($(this).attr('_orderid'));
+	console.log($(this).attr('_passkey'));
+    var deleteRecycleUrl ="http://order.jd.com/lazy/deleteOrder.action?orderId="+$(this).attr('_orderid')+"&PassKey="+$(this).attr('_passkey')+"&callback=jQuery8415760&_=1468664980222";
+	 $.ajax({
+             type: "GET",
+             url: deleteRecycleUrl,
+             dataType: "json",
+             success: function(data){
+			    console.log("成功删除");
+			 }
+			 });
+});
