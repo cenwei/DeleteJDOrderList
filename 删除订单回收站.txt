@@ -1,4 +1,4 @@
-//��ջ���վ
+//删除订单回收站
 $('a.order-del').each(function(){
 	console.log($(this).attr('_orderid'));
 	console.log($(this).attr('_passkey'));
@@ -8,7 +8,7 @@ $('a.order-del').each(function(){
              url: deleteRecycleUrl,
              dataType: "json",
              success: function(data){
-			    console.log("�ɹ�ɾ��");
+			    console.log("不在乎是不是json的返回");
 			 }
 			 });
 });
