@@ -9,7 +9,7 @@ $('a.order-del').each(function(){
              url: deleteOrderUrl,
              dataType: "json",
              success: function(data){
-			    console.log("냥묘뇜");
+			    console.log("不在乎是不是json返回");
 			 }
 			 });
 });
